@@ -1,0 +1,25 @@
+section{
+    display: grid;
+    border: 2px solid black;
+    height: 400px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px 50px 50px 30px;
+}
+
+.blue{
+    
+    border: 2px solid blue;
+    grid-column: 2/ span 2;
+
+}
+
+.red{
+    border: 2px solid red;
+}
+
+.yellow{
+    border: 2px solid yellow;
+    grid-column: 1/ span 3;
+}
