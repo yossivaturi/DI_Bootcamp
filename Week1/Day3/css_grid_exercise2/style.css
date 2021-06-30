@@ -1,0 +1,12 @@
+.item-1 {
+    grid-area: head;
+  }
+  .item-2 {
+    grid-area: main;
+  }
+  .item-3 {
+    grid-area: side;
+  }
+  .item-4 {
+    grid-area: footer;
+  }
