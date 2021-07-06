@@ -1,34 +1,26 @@
-// let sentence = "The movie is not that bad, I like it";
-// sentence = sentence.replace(/[^a-zA-Z ]/g, "");
-// console.log(sentence);
-// let sentenceArr = sentence.split(" ");
-// console.log(sentenceArr);
-
-// let wordNot = sentenceArr.indexOf("not");
-// console.log(wordNot);
-
-// let wordBad = sentenceArr.indexOf("bad");
-// console.log(wordBad);
-// let newSenetence = "";
-
-// if (wordBad > wordNot) {
-//     diff = wordBad - wordNot;
-//     sentenceArr.splice(wordNot, diff + 1, "good");
-//     newSenetence = sentenceArr.join(" ");
-//     console.log(newSenetence);
+// Lise Solution using Arrays 
+// let sentence = "This dinner is not that very very bad ! You cook well";
+// let sentenceArray = sentence.split(" ");
+// console.log("sentenceArray", sentenceArray);
+// let wordNot = sentenceArray.indexOf("not");
+// let wordBad = sentenceArray.indexOf("bad");
+// console.log("wordNot", wordNot, "wordBad", wordBad);
+// if (wordNot != -1 && wordBad != -1 && wordNot<wordBad){
+// 	sentenceArray.splice(wordNot, wordBad-wordNot + 1,"good")
+// 	let newSentence = sentenceArray.join(" ");
+// 	console.log("the new sentence is : ", newSentence);
 // } else {
-//     newSenetence = sentenceArr.join(" ");
-//     console.log(newSenetence);
+// 	console.log(sentence)
 // }
 
-
+// My Solution using String Methods
 let sentence = "The movie is not that bad, I like it";
 let start = sentence.indexOf("not");
-console.log(start);
-let end = sentence.indexOf("bad") + 3;
-console.log(end);
-let subStr = sentence.substring(start, end);
-if(end>start) {
+console.log("index of the word not: ", start);
+let end = sentence.indexOf("bad");
+console.log("index of the word bad: ", end);
+let subStr = sentence.substring(start, end + 3);
+if(end != -1 && start != -1 && end > start) {
     sentence = sentence.replace(subStr, "good"); 
 }
 console.log(sentence);
