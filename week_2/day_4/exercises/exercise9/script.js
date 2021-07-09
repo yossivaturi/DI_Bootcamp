@@ -1,26 +1,52 @@
 // Exercise 9 : Vacations Costs
-// Instructions
-// Let’s create functions that calculate your vacation’s costs:
 
-// Define a function called hotelCost().
-// It should ask the user for the number of nights they would like to stay in the hotel.
-// If the user doesn’t answer or if the answer is not a number, ask again.
-// The hotel costs $140 per night. The function should return the total price of the hotel.
-// Define a function called planeRideCost().
-// It should ask the user for their destination.
-// The function should return a different price depending on the location.
-// “London”: 183$
-// “Paris” : 220$
-// All other destination : 300$
-// If the user doesn’t answer or if the answer is not a string, ask again.
-// Define a function called rentalCarCost().
-// It should ask the user for the number of days they would like to rent the car.
-// If the user doesn’t answer or if the answer is not a number, ask again.
-// Calculate the cost to rent the car. The car costs $40 everyday.
-// If the user rents a car for more than 10 days, they get a 5% discount.
-// The function should return the total price of the car rental.
-// Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
-// Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
-// Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost.
-// Call the function totalVacationCost()
-// Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function.
+function hotelCost() {
+    let numNights;
+    const nightCost = 140;
+    do {
+        numNights = parseInt(prompt("the number of nights you want to stay?"));
+    } while (isNaN(numNights) || numNights == "" || numNights == null);
+    
+    return numNights * nightCost;
+}
+
+function planeRideCost() {
+    let dest = "";
+    do {
+        dest = prompt("whats your destination?");
+    } while (dest == "" || typeof(dest) != "string");
+    
+    if(dest == "London") {
+        return 183;
+    }
+    if(dest == "Paris") {
+        return 220;
+    }
+    return 300;
+}
+
+
+function rentalCarCost() {
+    let totalPrice = 0;
+    let daysRent = 0;
+    const rentCost = 40;
+    do {
+        daysRent = parseInt(prompt("the number of days you would like to rent a car?"));
+    } while (isNaN(daysRent) || daysRent == "" || daysRent == null);
+
+    totalPrice = daysRent * rentCost;
+    if(daysRent > 10) {
+        totalPrice *= 0.95;
+    }
+    return totalPrice;
+}
+
+function totalVacationCost() {
+    let x = hotelCost();
+    let y = planeRideCost();
+    let z = rentalCarCost();
+    console.log(`x = ${x} | y = ${y} | z = ${z}`);
+    return x + y + z;
+}
+
+console.log(totalVacationCost());
