@@ -1,5 +1,9 @@
 function bottlesOfBeer() {
-    let userInput = parseInt(prompt("enter a number"));
+    let userInput;
+    do{
+    userInput = parseInt(prompt("enter a number"));
+    } while(isNaN(userInput));
+    
     let sub = 1;
     while (userInput > 0 && userInput>=sub) {
         console.log(`${userInput} bottles of beer on the wall`);
@@ -19,3 +23,4 @@ function bottlesOfBeer() {
         console.log(`You can't, you have only ${userInput} bottles left, and youre trying to knock ${sub} down`);
     }
 }
+bottlesOfBeer();
