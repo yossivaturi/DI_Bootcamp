@@ -1,0 +1,51 @@
+/* HTML, CSS:
+
+How will you make the grid of colors?
+How will you make the grid of blank squares?
+Hint… GRID :P */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .main {
+    height: 100vh;
+    width: 100%;
+
+} */
+
+#leftside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-rows: repeat(8, 1fr);
+    height: 100vh;
+    width: 20%;
+    /* push element to the left, fix the right element going down problem */
+    float: left;
+}
+
+#rightside {
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+
+    height: 100vh;
+    width: 80%;
+
+}
+
+button {
+    /* use span to extend the button */
+    grid-column: span 3;
+}
+
+.left-div {
+    border: 1px solid black;
+}
+
+.right-div {
+    border: 1px solid lightgrey;
+
+}
