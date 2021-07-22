@@ -1,0 +1,24 @@
+body {
+    background-image: url("https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/circuit-pattern.png?raw=true");
+    background-color: rebeccapurple;
+}
+
+.robot {
+    border-radius: 10%;
+    background-color: lightskyblue;
+    background-image: url("https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/card-pattern.png?raw=true");
+}
+
+img {
+    background-color: black;
+    border-radius: 100%;
+
+}
+
+#robot-container {
+    padding: 20px;
+}
+
+.row {
+    gap: 20px;
+}
