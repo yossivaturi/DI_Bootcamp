@@ -1,0 +1,1 @@
+//we can see the form data entered in the url as a query string
